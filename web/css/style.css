@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-color: #111111;
+    color: #FFFFFF;
+    position: fixed;
+}
+.header ul{
+    display: flex;
+}
+.header ul a {
+    list-style-type: none;
+    padding: 2%;
+    text-decoration: none;
+    color: #FFFFFF;
+}
