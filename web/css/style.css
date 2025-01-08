@@ -9,7 +9,7 @@ body{
 
 .header{
     background-color: #111111;
-    color: #FFFFFF;
+    color: #FAFAFA;
     position: fixed;
 }
 .header ul{
@@ -17,7 +17,7 @@ body{
 }
 .header ul a {
     list-style-type: none;
-    padding: 2%;
+    padding: 5%;
     text-decoration: none;
     color: #FFFFFF;
 }
