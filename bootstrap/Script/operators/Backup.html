@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #more{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum, placeholder or dummy text used in typesetting and graphic design for previewing layouts. It
+        features<span onclick="learn()">Learn more</span><span id="more">scrambled Latin text, which emphasizes the design over content of the layout. It is the standard placeholder
+        text of the printing and publishing industries.</span> 
+    </p>
+    <p id="para">this is paragraph</p>
+    <button onclick="data()">click</button>
+    <script>
+        function learn(){
+            document.getElementById('more').style.display='block';
+        }
+        function data(){
+            document.getElementById('para').innerHTML = "This is a dumy perpose new content"
+        }
+
+
+        // let x = 20;
+        // x = 50;
+        // let y = 30;
+        // const result = x + y
+        // // alert(result);
+        // // document.write(result)
+        // console.log(result);
+    </script>
+</body>
+
+</html>

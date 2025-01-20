@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <form>
+        <input type="number" placeholder="Enter First Value" id="fn"><br />
+        <input type="number" placeholder="Enter second Value" id="sn">
+
+    </form>
+    <button onclick="add()">submit</button> -->
+
+    <script>
+        // alert("hello");
+        // confirm("working")
+        let Age = +prompt("Enter your Age")
+        let DOB = +prompt("Enter DOB")
+                    
+        const res = Age >= 18 && DOB <= 2006;
+
+        let currYear = new Date().getFullYear();
+        console.log(currYear)
+        const fnlres = currYear - DOB
+
+        const result = fnlres == Age
+        console.log(fnlres)
+        alert(result);
+
+
+
+
+        // function add() {
+        //     let firstVal = document.getElementById('fn').value;
+        //     let parsFv = parseInt(firstVal)
+        //     let secVal = document.getElementById('sn').value;
+        //     let parssv = parseInt(secVal)
+
+        //     const res = parsFv + parssv;
+        //     console.log(res)
+        // }
+    </script>
+
+</body>
+
+</html>
