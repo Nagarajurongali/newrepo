@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form action="">
         <input type="number" id="crdt">
@@ -12,9 +14,23 @@
     </form>
     <a href="./index.html">back</a>
     <script>
-        var usrBls = localStorage.getItem('bls')
-        console.log(usrBls)
-        
+
+        document.querySelector('#sub').addEventListener('click', function () {
+            var currBls = parseInt(localStorage.getItem("userbls"));
+            let givenAmt = parseInt(document.getElementById("crdt").value)
+            // let givenVal = +prompt("enter credit Amount");
+
+            const fnlRes = givenAmt + currBls
+
+            alert(fnlRes)
+
+            localStorage.setItem("crdtAmount" , fnlRes);
+
+        })
+
+
+
     </script>
 </body>
+
 </html>

@@ -6,9 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+    <p>A/C balance:<span id="currBls"></span></p>
+    <a href="./credit.html">credit</a>
     <script>
-        sessionStorage.setItem("amount" , 5000);
-        document.write("given Amount"+sessionStorage.getItem("amount"))
+        var userBls = localStorage.getItem('crdtAmount');
+        
+        localStorage.setItem('userbls' , userBls)
+        document.getElementById('currBls').innerHTML = localStorage.getItem('crdtAmount')
+        
+        
     </script>
 </body>
 </html>
