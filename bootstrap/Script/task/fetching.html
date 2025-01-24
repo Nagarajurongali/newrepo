@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function getData(){
+            let url = await fetch('https://dummyjson.com/products');
+            let mydata = await url.json();
+            let items = mydata.products;
+            console.log(items)
+        }getData()
+    </script>
+</body>
+</html>
