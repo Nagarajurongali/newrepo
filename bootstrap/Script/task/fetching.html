@@ -1,18 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .products{
+            height: 350px;
+            width: 200px;
+            background-color: antiquewhite;
+            margin: 1%;
+            padding: 1%;
+        }
+        .products img{
+            height: 180px;
+        }
+    </style>
 </head>
+
 <body>
+
+    <div class="main"></div>
+
+
     <script>
-        async function getData(){
+        async function getData() {
             let url = await fetch('https://dummyjson.com/products');
             let mydata = await url.json();
             let items = mydata.products;
-            console.log(items)
-        }getData()
+            console.log(items);
+
+            let dataItems = items.map((e)=>{
+                let allimgs = e.images && e.images.length > 0 ?
+                e.images.map((img)=>{
+                    return `<img src=${img} />`
+                })
+                :`<p>Images Not Found</p>`
+                return(
+                    `
+                    <div class="products">
+                    <p>${allimgs}</p>
+                    <p>${e.id}</p>
+                    <p>${e.brand}</p>
+                    <p>${e.category}</p>
+                    <button>Add cart</button>
+                    </div>
+                    `
+                )
+            }).join(' ');
+            document.querySelector('.main').innerHTML = dataItems
+        }
+        getData();
+
+
     </script>
 </body>
+
 </html>

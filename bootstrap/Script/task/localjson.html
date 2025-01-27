@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main"></div>
+    <script>
+        let products = [
+            {
+                'id': 1,
+                'Brand': 'Apple',
+                'model': '18Promax+',
+                'price': 70000,
+                'colour' : 'white'
+            },
+            {
+                'id': 2,
+                'Brand': 'one+',
+                'model': 'Norde+',
+                'price': 40000,
+                'colour' : 'green'
+            },
+            {
+                'id': 3,
+                'Brand': 'Apple',
+                'model': '18Promax+',
+                'price': 70000,
+                'colour' : ['red' , 'green' , 'white' , 'black']
+            },
+            {
+                'id': 4,
+                'Brand': 'Apple',
+                'model': '18Promax+',
+                'price': 70000,
+                'colour' : 'red'
+            },
+            {
+                'id': 5,
+                'Brand': 'Apple',
+                'model': '18Promax+',
+                'price': 70000,
+                'colour' : 'red'
+            },
+        ]
+        console.log(products);
+        let mydata = products.map((e) => {
+            return (
+                `
+                    <div>
+                    <p>id: ${e.id}</p>
+                    <p>Brand :${e.Brand}</p>
+                    <p>Model :${e.model}</p>
+                    <p>Price${e.price}</p>
+                    <p>colour:${e.colour}</p>
+                    </div>
+                    `
+            )
+        }).join(' ')
+
+
+        document.querySelector('.main').innerHTML = mydata
+    </script>
+</body>
+
+</html>
